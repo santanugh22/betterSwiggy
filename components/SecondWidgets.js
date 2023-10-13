@@ -1,10 +1,10 @@
 import { StyleSheet, Text, View } from 'react-native'
-const Dineout = () => {
+const SecondWidgets = () => {
   return (
     <View>
-      <Text>Dineout</Text>
+      <Text>SecondWidgets</Text>
     </View>
   )
 }
-export default Dineout
+export default SecondWidgets
 const styles = StyleSheet.create({})

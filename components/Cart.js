@@ -1,10 +1,10 @@
 import { StyleSheet, Text, View } from 'react-native'
-const Instamart = () => {
+const Cart = () => {
   return (
     <View>
-      <Text>Instamart</Text>
+
     </View>
   )
 }
-export default Instamart
+export default Cart
 const styles = StyleSheet.create({})

@@ -1,12 +1,15 @@
 import { StyleSheet, Text, View ,Image} from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import Swiggy from '../components/Swiggy'
-import Food from '../components/Food'
-import Instamart from '../components/Instamart'
-import Dineout from '../components/Dineout'
-import Meat from '../components/Meat'
-import { MaterialCommunityIcons } from "@expo/vector-icons";
+import Food from '../components/Search'
+import Cart from '../components/Cart'
+import { AntDesign } from "@expo/vector-icons";
+import { FontAwesome } from "@expo/vector-icons";
+
+
+
 import { Ionicons } from "@expo/vector-icons";
+import Profile from '../components/Profile'
 
 const Tab=createBottomTabNavigator()
 const TabScreen = () => {
@@ -16,8 +19,8 @@ const TabScreen = () => {
         headerShown: false,
         tabBarStyle: {
           height: 100,
-          alignItems:'center',
-          justifyContent:'center'
+          alignItems: "center",
+          justifyContent: "center",
         },
       }}
     >
@@ -39,30 +42,37 @@ const TabScreen = () => {
         options={{
           tabBarIcon: ({ focused }) =>
             focused ? (
-              <MaterialCommunityIcons name="bowl-mix" size={40} color="black" />
+              <AntDesign name="search1" size={35} color="black" />
             ) : (
-              <MaterialCommunityIcons
-                name="bowl-mix-outline"
-                size={40}
-                color="black"
-              />
+              <AntDesign name="search1" size={35} color="black" />
             ),
         }}
       />
       <Tab.Screen
-        name="Instamart"
-        component={Instamart}
+        name="Cart"
+        component={Cart}
         options={{
           tabBarIcon: ({ focused }) =>
             focused ? (
-              <Ionicons name="md-wine" size={40} color="black" />
+              <Ionicons name="cart" size={40} color="black" />
             ) : (
-              <Ionicons name="md-wine-outline" size={38} color="black" />
+              <Ionicons name="cart-outline" size={40} color="black" />
             ),
         }}
       />
-      <Tab.Screen name="Dineout" component={Dineout} />
-      <Tab.Screen name="Meat" component={Meat} />
+      <Tab.Screen
+        name="Profile"
+        component={Profile}
+        options={{
+          tabBarIcon: ({ focused }) =>
+            focused ? (
+              <FontAwesome name="user" size={35} color="black" />
+            ) : (
+              <FontAwesome name="user-o" size={35} color="black" />
+
+            ),
+        }}
+      />
     </Tab.Navigator>
   );
 }

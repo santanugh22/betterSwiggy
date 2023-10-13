@@ -1,10 +1,10 @@
 import { StyleSheet, Text, View } from 'react-native'
-const Food = () => {
+const Search = () => {
   return (
     <View>
-      <Text>Food</Text>
+
     </View>
   )
 }
-export default Food
+export default Search
 const styles = StyleSheet.create({})
